@@ -9,27 +9,39 @@ long_string = <<-world_cup_news
 world_cup_news
 
 # enter your solutions inside the methods
-def goal(message)
+def goal(goal_message)
+  goal_message * 2
+end
+
+def generate_an_array_of_teams(team_list)
+  team_array = team_list.split(', ')
+  team_array
+end
+
+def number_of_teams(team_list)
+  team_array = team_list.split(', ')
+  team_array.length
+end
+
+def return_australia(team_list)
+  names = team_list.split(', ')
+  names[6]
 
 end
 
-def generate_an_array_of_teams(teams)
-
+def starts_with_C(team_list)
+  team_C = []
+  team_array = team_list.split(', ')
+  team_array.each {|team_array| if team_array.include?'C'
+                               team_C.push(team_array)
+                                end}
+  team_C
 end
 
-def number_of_teams(teams)
-
-end
-
-def return_australia(teams)
-
-end
-
-def starts_with_C(teams)
-
-end
-
-def block_string_to_single_line(block_string)
+def block_string_to_single_line(long_string)
+  long_array = long_string.split('.,')
+  long_array
+  puts long_array
 
 end
 
